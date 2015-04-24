@@ -1,3 +1,18 @@
 'use strict';
 
-var foo = require( './../lib' );
+var isValid = require( './../lib' );
+
+console.log( isValid( [3,1,4,2] ) );
+// returns true
+
+console.log( isValid( [3,1,0,2] ) );
+// returns false
+
+console.log( isValid( [] ) );
+// returns false
+
+console.log( isValid( [3.14] ) );
+// returns false
+
+console.log( isValid( [0,-1] ) );
+// returns false
